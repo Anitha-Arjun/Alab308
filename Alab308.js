@@ -1,3 +1,4 @@
+//Part 1
 // // The initial numbers that must be verified.
 const n1 = 15;
 const n2 = 14;
@@ -46,15 +47,26 @@ const isUnique =
   n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
 console.log("Is All number unique: " + isUnique);
 
+//Part 2
+
+//Calculates the fuels required, budget and hours
+
 function calculateTrip(speed, mpg) {
   let trip = 1500;
+  let gallonPrice = 3;
+  let budget = 175;
   //let speed = 55;
   //let mpg = 30;
+
+  //Calculates the fuel
   let gallonsReq = trip / mpg;
-  let gallonPrice = 3;
+
+  //calculates the budget
   let tripCost = gallonsReq * gallonPrice;
+
+  // Calculates the hour
   let timeTaken = trip / speed;
-  let budget = 175;
+
   let meetsBudget = tripCost <= budget;
   console.log("Trip Cost : " + tripCost);
   console.log("Meeting Fuel Budget : " + meetsBudget);
